@@ -1,0 +1,21 @@
+<div class="container">
+  <form>
+    <div class="form-group">
+        <input type="text" class="form-control" name="first" [(ngModel)]="first"  placeholder="Enter first number" >
+    </div>
+    <div class="form-group">
+        <select class="form-control" name="operation" [(ngModel)]="operation">
+          <option [ngValue]='"+"'>+</option>
+          <option [ngValue]='"-"'>-</option>
+          <option [ngValue]='"*"'>*</option>
+          <option [ngValue]='"/"'> / </option>
+        </select>
+      </div>
+    <div class="form-group">
+        <input type="text" class="form-control" name="second" [(ngModel)]="second"  placeholder="Enter second number" (keyup.enter)="calculate();" >
+    </div>
+    <div >
+      {{answer}}
+    </div>
+  </form>
+</div>
